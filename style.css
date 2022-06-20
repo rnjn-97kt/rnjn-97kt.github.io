@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,200;0,300;0,400;0,500;1,200;1,300;1,400;1,500&display=swap');
+*{
+    margin: 0; padding: 0;
+    font-family: 'Noto Sans', sans-serif;
+}
+
+body{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to right bottom, #ff0000, #0000ff);
+}
+
+
+form{
+    width: 65vw;
+    min-height: 450px;
+    background: #1c7af5;
+    box-shadow: 0 .5rem 50px 5px #333;
+    border-radius: 10px;
+}
+
+.container{
+    margin: 5% auto;
+    width: 630px;
+    height: 420px;
+    background: #fff;
+    border-radius: 5px;
+}
+
+.container legend{
+    font-size: 2rem;
+    width: 100%;
+    text-align: center;
+    padding: 20px 0;
+    font-weight: 400;
+    color: #1c7af5;
+}
+
+.service-form{
+    display: grid;
+    grid-template-columns: auto auto;
+    /* justify-content: center; */
+}
+
+.row{
+    margin: 0 auto;
+}
+
+.row > input{
+    font-size: 1.2rem;
+    margin-bottom: 1.2rem;
+    padding: .5rem .8rem;
+    border: 1px solid #aaa;
+    border-radius: 5px;
+    color: #777;
+    outline: none;
+}
+
+.btn > input{
+    width: 290px;
+    background: #3d88dd;
+    color: #fff;
+    cursor: pointer;
+    border: 1px solid #3d88dd;
+}
+
+.btn > input:hover{
+    background: #fff;
+    color: #3d88dd;
+}
+
+.btn > input:active{
+    background: #3d88dd;
+    color: #fff;
+}

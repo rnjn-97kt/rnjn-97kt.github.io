@@ -5,8 +5,45 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    hello
+    <form>
+        <div class="container">
+            <legend>Service Form</legend>
+            <div class="service-form">
+                <div class="row">
+                    <input type="text" name="name" id="name" placeholder="Enter Name..." required>
+                </div>
+                <div class="row">
+                    <input type="text" name="work" id="work" placeholder="Enter Service..." required>
+                </div>
+                <div class="row">
+                    <input type="text" name="amount" id="amount" placeholder="Enter Service Charge..." required>
+                </div>
+                <div class="row">
+                    <input type="text" name="paid" id="paid" placeholder="Enter paid Amount..." required>
+                </div>
+                <div class="row">
+                    <input type="text" name="due" id="due" placeholder="Enter Due Amount..." required>
+                </div>
+                <div class="row">
+                    <input type="text" name="status" id="status" placeholder="Enter Service Status..." required>
+                </div>
+                <div class="row btn btn-submit">
+                    <input type="submit" value="Save Record" id="save-record">
+                </div>
+                <div class="row btn btn-submit">
+                    <input type="reset" value="Reset Data" id="reset">
+                </div>
+                <div class="row btn btn-submit">
+                    <input type="button" value="Delete" id="delete">
+                </div>
+                <div class="row btn btn-submit">
+                    <input type="button" value="Delete All" id="delete-all">
+                </div>
+            </div>
+        </div>
+    </form>
 </body>
 </html>
