@@ -11,32 +11,22 @@
     <header>
         <h1>anshika jan sewa day book</h1>
     </header>
-    <p id="date" class="date">12 june 2022</p>
-    <form action="record.html" id="day-book-form">
-        <div class="input-record input-name">
-            <input type="text" name="name" id="name" placeholder="Enter Customer Name...">
-        </div>
-        <div class="input-record input-services">
-            <input type="text" name="services" id="services" placeholder="Enter Service Provided...">
-        </div>
-        <div class="input-record input-amount">
-            <input type="text" name="amount" id="amount" placeholder="Enter Total amount...">
-        </div>
-        <div class="input-record input-paid">
-            <input type="text" name="paid" id="paid" placeholder="Enter Paid Amount...">
-        </div>
-        <div class="input-record input-due">
-            <input type="text" name="due" id="due" placeholder="Enter Due Amount...">
-        </div>
-        <div class="input-record input-status">
-            <input type="text" name="status" id="status" placeholder="Enter Service Status...">
-        </div>
-        <div class="input-record input-submit">
-            <input type="submit" id="submit" value="Save Record">
-        </div>
-        <div class="input-record input-delete">
-            <input type="button" id="btn-delete" value="Delete All">
-        </div>
+    <p id="date" class="date">12 june 2022</p><hr>
+        <form action="record.html" id="day-book-form">
+        <div class="form-container">
+            <div class="input-daily-records">
+                <input type="text" name="name" id="name" placeholder="Customer Name..." required>
+                <input type="text" name="service" id="service" placeholder="Service Name..." >
+                <input type="number" name="amount" id="amount" placeholder="Total Amount..." required>
+                <input type="number" name="paid" id="paid" placeholder="Paid Amount..." required>
+                <input type="number" name="due" id="due" placeholder="Due Amount...">
+                <input type="number" name="status" id="status" placeholder="Service Status...">
+            </div>
+            <div class="button">
+                <input type="submit" value="Save Record" class="save-btn btn" id="save-btn">
+                <input type="button" value="View Record" class="view-btn btn" id="view-btn">
+            </div>
+        </div> 
     </form>
 </body>
 </html>
