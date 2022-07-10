@@ -1,4 +1,7 @@
 let todayRecords = []
+
+let savedRecords = JSON.parse(localStorage.getItem('Record'))
+
 class Record {
     constructor(names, service, amount, paid, due, stats){
         this.names = names
@@ -8,6 +11,10 @@ class Record {
         this.due = due
         this.stats = stats
     }
+}
+
+if(savedRecords){
+    todayRecords = savedRecords
 }
 
 document.getElementById('day-book-form').addEventListener('submit', (e)=>{
@@ -22,9 +29,12 @@ document.getElementById('day-book-form').addEventListener('submit', (e)=>{
 
     const records = new Record(names, service, amount, paid, due, stats)
 
-    todayRecords.push(records)
-    localStorage.setItem('Record', JSON.stringify(todayRecords))
     clearfields()
+
+    todayRecords.push(records)
+
+    localStorage.setItem('Record', JSON.stringify(todayRecords))
+    
 })
 
 function clearfields(){
@@ -43,3 +53,8 @@ let mm = String(today.getMonth() + 1).padStart(2,'0')
 let yyyy = today.getFullYear()
 
 document.getElementById('date').textContent = dd + '/' + mm + '/' + yyyy
+
+
+document.getElementById('view-btn').addEventListener('click',() => {
+    location.href = '../records/records.html'
+})

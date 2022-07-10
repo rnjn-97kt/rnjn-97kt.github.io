@@ -14,6 +14,7 @@
 }
 
 body{
+    min-width: 580px;
     padding: 0 10%;
 }
 
@@ -148,3 +149,40 @@ form{
         height: 4vh;
     }
  }
+
+ /* Style for Records Table */
+
+ table,
+ tr,
+ td,
+ th{
+    margin-top: 2.5rem;
+    border-collapse: collapse;
+ }
+
+th,
+td{
+    width: 300px;
+    font-size: 1.1rem;
+}
+
+tr{
+    height: 40px;
+    border-bottom: 2px solid #888;
+}
+
+td{
+    text-align: center;
+}
+
+.delete{
+    display: block;
+    margin: 1.2rem auto;
+    padding: .4rem .8rem;
+    font-size: 1.2rem;
+    border: 1px solid #888;
+}
+
+#link{
+    color: #888;
+}
