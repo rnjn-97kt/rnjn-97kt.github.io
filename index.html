@@ -6,23 +6,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>|| Service Form ||</title>
     <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
 </head>
 <body>
     <header>
         <h1>anshika jan sewa day book</h1>
     </header>
-    <p id="date" class="date">12 june 2022</p><hr>
-        <form action="record.html" id="day-book-form">
+    <p id="date" class="date"></p><hr>
+    <form id="day-book-form">
         <div class="form-container">
             <div class="input-daily-records">
-                <input type="text" name="name" id="name" placeholder="Customer Name..." required>
+                <input type="text" name="name" id="name" placeholder="Customer Name..." required >
                 <input type="text" name="service" id="service" placeholder="Service Name..." >
                 <input type="number" name="amount" id="amount" placeholder="Total Amount..." required>
                 <input type="number" name="paid" id="paid" placeholder="Paid Amount..." required>
                 <input type="number" name="due" id="due" placeholder="Due Amount...">
-                <input type="number" name="status" id="status" placeholder="Service Status...">
-            </div>
-            <div class="button">
+                <input type="text" name="status" id="status" placeholder="Service Status...">
                 <input type="submit" value="Save Record" class="save-btn btn" id="save-btn">
                 <input type="button" value="View Record" class="view-btn btn" id="view-btn">
             </div>

@@ -1,15 +1,45 @@
-let save = document.getElementById("save-record")
+let todayRecords = []
+class Record {
+    constructor(names, service, amount, paid, due, stats){
+        this.names = names
+        this.service = service
+        this.amount = amount
+        this.paid = paid
+        this.due = due
+        this.stats = stats
+    }
+}
 
-let reset = document.getElementById("reset")
+document.getElementById('day-book-form').addEventListener('submit', (e)=>{
+    e.preventDefault()
 
-let deleteData = document.getElementById("delete")
+    const names = document.getElementById('name').value
+    const service = document.getElementById('service').value
+    const amount = document.getElementById('amount').value
+    const paid = document.getElementById('paid').value
+    const due = document.getElementById('due').value
+    const stats = document.getElementById('status').value
 
-let deleteAll = document.getElementById("delete-all")
+    const records = new Record(names, service, amount, paid, due, stats)
 
-save.addEventListener("click", "hello world")
+    todayRecords.push(records)
+    localStorage.setItem('Record', JSON.stringify(todayRecords))
+    clearfields()
+})
 
-save.addEventListener("click", "hello world")
+function clearfields(){
+    document.getElementById('name').value = ''
+    document.getElementById('service').value = ''
+    document.getElementById('amount').value = ''
+    document.getElementById('paid').value = ''
+    document.getElementById('due').value = ''
+    document.getElementById('status').value = ''
+}
 
-save.addEventListener("click", "hello world")
+let today = new Date()
 
-save.addEventListener("click", "hello world")
+let dd = String(today.getDate()).padStart(2,'0')
+let mm = String(today.getMonth() + 1).padStart(2,'0')
+let yyyy = today.getFullYear()
+
+document.getElementById('date').textContent = dd + '/' + mm + '/' + yyyy

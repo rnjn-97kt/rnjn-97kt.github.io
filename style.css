@@ -1,7 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,200;0,300;0,400;0,500;1,200;1,300;1,400;1,500&display=swap');
 :root{
     --primary-color: #ffffff;
-    --text-color: #2699ff;
+    --bg-color: #2699ff;
+    --text-color: #fd4747;
 }
 
 *{
@@ -66,7 +67,6 @@ form{
     border: 1px solid #888;
     -moz-appearance: textfield;
     outline: none;
-    color: #888;
 }
 
 .input-daily-records > input::-webkit-outer-spin-button,
@@ -77,10 +77,6 @@ form{
 
 .btn{
     text-align: center;
-    margin: 1.2rem 0.75rem;
-    width: 42%;
-    font-size: 1.2rem;
-    padding: .4rem 1.1rem;
     background: var(--text-color);
     border: 1px solid var(--text-color);
     color: var(--primary-color);
@@ -113,7 +109,6 @@ form{
 
  @media (max-width: 992px){
     form{
-        border: 1px solid red;
         max-width: 80%;
     }
     .form-container{
@@ -128,6 +123,15 @@ form{
     form{
         max-width: 90%;
     }
+    header {
+        height: 6vh;
+    }
+    header h1{
+        font-size: 2.5rem;
+    }
+    .date{
+        margin-right: 1.1rem;
+    }
  }
 
  @media (max-width: 576px){
@@ -136,5 +140,11 @@ form{
     }
     .input-daily-records > input{
         width: 90%;
+    }
+    header h1{
+        font-size: 2rem;
+    }
+    header {
+        height: 4vh;
     }
  }
